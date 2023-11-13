@@ -34,7 +34,6 @@ class TestCity(unittest.TestCase):
 
     def test_8_instantiation(self):
         """Tests instantiation of City class."""
-
         b = City()
         self.assertEqual(str(type(b)), "<class 'models.city.City'>")
         self.assertIsInstance(b, City)
@@ -47,6 +46,7 @@ class TestCity(unittest.TestCase):
         for k, v in attributes.items():
             self.assertTrue(hasattr(o, k))
             self.assertEqual(type(getattr(o, k, None)), v)
+
 
 if __name__ == "__main__":
     unittest.main()
